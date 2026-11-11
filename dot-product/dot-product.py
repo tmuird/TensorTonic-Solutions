@@ -1,8 +1,9 @@
 import numpy as np
 
-def dot_product(x: np.ndarray, y: np.ndarray) -> float:
+def dot_product(x, y) -> float:
     """
     Returns the dot product as a float.
     """
     
-    return float(np.dot(x,y))
+    return float(np.asarray(x, dtype=np.float64) @ np.asarray(y, dtype=np.float64))
+    
