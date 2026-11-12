@@ -9,6 +9,5 @@ def kl_divergence(p: list, q: list, eps: float = 1e-12) -> float:
     q = np.array(q)
     ratio = p / np.clip(q,eps,None)
     mask = p > 0
-    print(ratio)
     kld = np.sum(p[mask] * np.log(ratio[mask]))
     return float(kld) 
